@@ -53,19 +53,21 @@ class OrderItem:
 class Order:
     def __init__(self):
         self.__order_items = []
+        self.__ingridient_dict = {}
 
     def add_ingridient(self, ingridient, quantity):
-        if ingridient in self.__order_items:
-            print("Hello")
-            indx = self.__order_items.index(ingridient)
-            old_quantity = self.__order_items[indx].quantity
-            self.__order_items[indx].quantity = old_quantity + quantity
+        order_item = self.__ingridient_dict.get(ingridient, None)
+        
+        if order_item is not None:
+            old_quantity = order_item.quantity
+            order_item.quantity = old_quantity + quantity
 
         else:
             item = OrderItem(ingridient)
             item.quantity = quantity
 
             self.__order_items.append(item)
+            self.__ingridient_dict[ingridient] = item
     
     def get_price(self):
         price = 0
