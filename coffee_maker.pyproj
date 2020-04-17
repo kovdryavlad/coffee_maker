@@ -4,7 +4,7 @@
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>2103d699-9664-4dd4-a85e-4294dc0b050f</ProjectGuid>
     <ProjectHome>.</ProjectHome>
-    <StartupFile>coffee_maker.py</StartupFile>
+    <StartupFile>coffe_service.py</StartupFile>
     <SearchPath>
     </SearchPath>
     <WorkingDirectory>.</WorkingDirectory>
@@ -24,7 +24,10 @@
     <Compile Include="classes.py">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="coffee_maker.py" />
+    <Compile Include="coffe_service.py" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="ingridients.json" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.targets" />
   <!-- Uncomment the CoreCompile target to enable the Build command in

@@ -1,0 +1,24 @@
+{
+  "ingridients": [
+    {
+      "name": "Coffe_type_A",
+      "price": 15
+    },
+    {
+      "name": "Coffe_type_B",
+      "price": 18
+    },
+    {
+      "name": "Coffe_type_C",
+      "price": 22
+    },
+    {
+      "name": "Milk",
+      "price": 5
+    },
+    {
+      "name": "Sugar",
+      "price": 2
+    }
+  ]
+}

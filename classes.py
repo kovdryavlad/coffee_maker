@@ -1,12 +1,19 @@
 class Ingridient:
-    def __init__(self, name):
+    def __init__(self, name, price):
+        self.name = name
+        self.price = price
+
+    @property
+    def name(self):
+        return self.__name;
+
+    @name.setter
+    def name(self, name):
         if Ingridient.is_valid_name(name):
             self.__name = name
         else:
             self.__name = "undefined"
 
-        self.__price = 1
-    
     @property
     def price(self):
         return self.__price;
@@ -16,12 +23,9 @@ class Ingridient:
         if price > 0:
             self.__price = price;
         else:
-            print("Invalid value of property 'price'")
-
-    @property
-    def name(self):
-        return self.__name;
-
+            self.__price = 1;
+            print(self.name, ": Due to mistake we have a discount. Price = 1")
+      
     def is_valid_name(name):
         return name != ""
 
